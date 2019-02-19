@@ -1,0 +1,7 @@
+1547888377 ERROR sub1 : sub1 error
+1547888377 WARN sub1 : sub1 warn
+1547888378 ERROR sub1.sub2 : sub2 error
+1547888378 ERROR sub1 : sub1 error
+1547888378 WARN sub1 : sub1 warn
+1547888381 ERROR sub1.sub2 : sub2 error
+1547888381 ERROR sub1.sub2 : test vform 123

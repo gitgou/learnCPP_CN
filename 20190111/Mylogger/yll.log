@@ -1,0 +1,5 @@
+2019-01-19 20:37:40,530 myCat [FATAL] this is an emerg message
+2019-01-19 20:37:40,530 myCat [FATAL] this is an fatal message
+2019-01-19 20:37:40,530 myCat [ALERT] this is an alert message
+2019-01-19 20:37:40,530 myCat [ERROR] this is an error message
+2019-01-19 20:37:40,531 myCat [WARN] this is an warn message
