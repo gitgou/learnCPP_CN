@@ -176,7 +176,7 @@
 
 - **thread 多线程**
 
-  熟悉 pthread库的使用，掌握互斥机制 pthread_mutex_t、条件变量 pthread_cond_t 、信号量semaphore（[博客](https://zhuanlan.zhihu.com/p/512969481)）。
+  熟悉 pthread库的使用，掌握互斥变量 pthread_mutex_t、条件变量 pthread_cond_t 、信号量semaphore（[博客](https://zhuanlan.zhihu.com/p/512969481)）。
 
   实现了两个版本的线程库供参考：[thread](https://github.com/gitgou/learnCPP_CN/tree/master/thread)
 
@@ -192,4 +192,4 @@
 
 **未完待续...**
 
-因时间紧促，资料补充不够充分，后续会陆续补充；有误之处，还望多多指正，也欢迎一起参与项目建设，联系方式见 github主页，感谢。
+因时间紧促，资料补充不够充分，后续会陆续补充；有误之处，还望多多指正，也欢迎一起参与项目建设，联系方式见 github 主页，感谢。
