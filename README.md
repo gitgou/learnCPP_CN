@@ -52,12 +52,10 @@
 
   ​	https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/DerivedCopy2.cc
 
-  了解领袖继承的二义性：
-
-  ​	https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/multiDerived1.cc
-    https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/multiDerived2.cc
-
+  了解	[多重继承](	https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/multiDerived1.cc
+)、	[菱形继承的二义性](https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/multiDerived2.cc)
   
+  ​	
 
 - **多态**
 
