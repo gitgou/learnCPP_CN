@@ -36,6 +36,7 @@ void * Function(void *)
 }
 void * Function2(void *)
 {
+	//先加锁
 	pthread_mutex_lock(&mutex);
 	int cnt = 10;
 	while(cnt--){
