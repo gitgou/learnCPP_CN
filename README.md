@@ -20,11 +20,11 @@
 
 -  **运算符重载**
 
-  掌握主要运算符+、-、*、/、前后置++、+= 等重载
+    掌握主要运算符+、-、*、/、前后置++、+= 等重载
 
-  [example](https://github.com/gitgou/learnCPP_CN/blob/master/class/operator/complex.cc)
+    [example](https://github.com/gitgou/learnCPP_CN/blob/master/class/operator/complex.cc)
 
-  [example_string](https://github.com/gitgou/learnCPP_CN/tree/master/STL_Components/string/String)
+    [example_string](https://github.com/gitgou/learnCPP_CN/tree/master/STL_Components/string/String)
 
 - **new/delete 函数**
 
