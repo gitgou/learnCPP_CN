@@ -28,7 +28,7 @@
 
 - **new/delete 函数**
 
-  学会 new/delete函数重载，对比以下两种实现区别：当 new/delete被声明为私有函数时，类只能被实例化为栈对象，而不能实例化在堆内存。
+  学会 new/delete 函数重载，对比以下两种实现区别：当 new/delete被声明为私有函数时，类只能被实例化为栈对象，而不能实例化在堆内存。
 
   https://github.com/gitgou/learnCPP_CN/blob/master/class/operator/stackStudent.cc
 
@@ -46,7 +46,7 @@
 
   ​	[代码导航](https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/Cicle.cc)
 
-  掌握派生类向上转型使用，对比以下例子区别：
+  掌握派生类向上转型，对比以下例子区别：
 
   ​	https://github.com/gitgou/learnCPP_CN/blob/master/class/inherit/DerivedCopy.cc
 
