@@ -1,54 +1,107 @@
- ///
- /// @file    shared_ptr.cc
- /// @author  yll(1711019653@qq.com)
- /// @date    2019-01-27 10:52:52
- ///
- 
-#include <iostream>
-#include<memory>
-using std::cout;
-using std::endl;
-using std::shared_ptr;
-
-class Point
+template<class T, class D = std::default_delete<T> >
+class shared_ptr
 {
 public:
+  shared_ptr()
+  :_ptr(nullptr)
+  ,_uCount(nullptr)
+  {
+    cout << "default constructor " << endl;
+  }
+  
+  shared_ptr(T* ptr)
+  :_ptr(ptr)
+  ,_uCount(new size_t(1))
+  {
+    cout << " constructor T*" << endl;
+  } 
+  
+  shared_ptr(T* ptr, D deleter)
+  :_ptr(ptr)
+  ,_deleter(deleter)
+  ,_uCount(new size_t(1))
+  {
+    cout << " constructor T* DD " << endl;
+  }
+  
+  shared_ptr(const shared_ptr<T, D> & sharedPtr)
+  {
+    if(sharedPtr._ptr)
+    {
+      _ptr = sharedPtr._ptr;
+      _uCount = sharedPtr._uCount;
+      add_count();
+    }
+  }
+  
+  shared_ptr& operator=(const shared_ptr<T, D> & sharedPtr)
+  {
+    if(_ptr == sharedPtr._ptr){ return *this; }
+	//用以释放之前管理的资源 
+    if(*_uCount == 1){  
+      free(); 
+    }else{
+      reduce_count();
+    }
+    
+	_ptr = sharedPtr._ptr;
+    _uCount = sharedPtr._uCount;
+    add_count();
+    
+	return *this;
+  }
+  
+  void swap(shared_ptr<T, D> & sharedPtr)
+  {
+    std::swap(_ptr, sharedPtr._ptr);
+    std::swap(_uCount, sharedPtr._uCount);
+  }
+  
+  void reset(T* ptr)
+  {
+    if(*_uCount == 1){ 
+      free(); 
+    }else{
+      reduce_count();   
+    }
+    _ptr = ptr;
+    _uCount = new size_t(1);
+  }
+  
+  T* get() const  { return _ptr; }
 
-	Point(int x, int y)
-	:_ix(x)
-	,_iy(y)
-	{
-		cout << "Point(int x, int y)" << endl;
-	}
-	void display()
-	{
-		cout << "("
-			 << _ix
-			 << ","
-			 << _iy
-			 << ")" << endl;
-	}
-	~Point()
-	{
-		cout << "~Point()" << endl;
-	}
+  size_t use_count()const { return *_uCount; }
+  
+  void print_use_count()
+  {
+    cout << *_uCount << endl;
+  }
+  ~shared_ptr()
+  {
+    //Call Deleter 
+    if(*_uCount == 1){
+      free();
+    }else{
+      reduce_count();
+      print_use_count();
+    }
+  }
 private:
-	int _ix;
-	int _iy;
+  void reduce_count()
+  {
+    if(*_uCount > 0) -- ( *_uCount);
+  }
+  
+  void add_count()  { ++(*_uCount); }
+  
+  void free()
+  {
+    _deleter(_ptr);
+    delete _uCount;
+  }
+private:
+  T* _ptr;
+  //std::function<void(T*)> _deleter;
+  D _deleter;
+  size_t* _uCount ; 
 };
- 
-int main(void)
-{
-	shared_ptr<int> up(new int(10));//管理堆空间的指针
-	cout << "*up " << *up << endl;
-	cout << up.get() << endl; //返回对象地址
-	cout << up.use_count() << endl;
-
-	shared_ptr<int> up2(up) ;
-	cout << up.use_count() << endl;
-	cout << up2.use_count() << endl;
-
-	shared_ptr<Point> pPoint(new Point(1,2));
-	pPoint.get()->display();
-	(*pPoint).display();
-}
