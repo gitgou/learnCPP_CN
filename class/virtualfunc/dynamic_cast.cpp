@@ -62,7 +62,7 @@ int main(){
 		cout << "derived3 Fail" <<endl;
 	}
 	*/
-	//dynamic_cast 会有类型检查
+	//dynamic_cast 运行时类型检查需要运行时类型信息，这个信息存在虚函数表中
 	//dynamic_cast运算符能够将基类的指针或引用安全的转换为派生类的指针或者引用
 	//dynamic_cast会根据基类指针是否真正指向继承类指针来做相应处理
 	//如果 downcast 不安全，这个运算符会传回空指针（也就是说，基类指针或者引用没有指向一个派生类对象)
