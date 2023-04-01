@@ -14,9 +14,9 @@
 
   掌握默认构造函数、构造函数重载、默认析构函数、析构函数重载、复制构造函数重载、赋值构造函数重载
 
-  [example_point]((https://github.com/gitgou/learnCPP_CN/tree/master/class/constructor/computer))
+  [computer_code_example](https://github.com/gitgou/learnCPP_CN/tree/master/class/constructor/computer)
 
-  [point_example](https://github.com/gitgou/learnCPP_CN/tree/master/class/constructor/point)
+  [point_code_example](https://github.com/gitgou/learnCPP_CN/tree/master/class/constructor/point)
 
 -  **运算符重载**
 
@@ -59,15 +59,15 @@
 
 - **多态**
 
-  **静态多态：**
+  **静态多态(发生在编译期的多态)：**
 
   - **函数重载：**如以上的构造函数重载，重载指允许在相同作用域中存在多个同名的函数，但要求**参数列表不同**
 
     
 
   - **函数隐藏**：覆盖是存在类中，子类重写从基类继承过来的函数，函数名、返回值、参数列表都必须和基类相同。当子类的对象调用成员函数的时候，如果成员函数有被覆盖则调用子类中覆盖的版本，否则调用从基类继承过来的函数。
-
-    
+  
+  **动态多态(发生在运行期)：**
 
   - **函数覆盖** ：虚函数允许子类重新定义成员函数，而子类重新定义父类的做法称为覆盖(override)，或者称为重写。最常见的用法就是声明基类的指针，利用该指针指向任意一个子类对象，调用相应的虚函数。重点掌握虚函数机制 -- **虚函数表**、**声明纯虚函数的抽象类**、**菱形继承**。
 
