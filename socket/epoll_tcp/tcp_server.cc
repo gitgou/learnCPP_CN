@@ -163,7 +163,7 @@ void hand_client_message(int epfd,  int peerfd, unordered_set<int> & client_set)
 		//	delete_epoll_readfd(epfd, peerfd);
 		//	::close(peerfd);
 		//	client_set.erase(peerfd);
-			//完成发送数据需要把peerfd清除，因为客户端将断开1链接，此文件描述符将不存在
+			//完成发送数据需要把peerfd清除，因为客户端将断开链接，此文件描述符将不存在(根据实际需求考虑是否断开)
 		}else if(ret == 0){
 			::close(peerfd);
 			delete_epoll_readfd(epfd, peerfd);
