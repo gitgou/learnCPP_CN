@@ -22,15 +22,21 @@ class Derived
 };
 
 class VirtualDerived1
-:public virtual Base{
+:virtual public EmptyClass{
+	void display(){
+		cout << "display virtual derived" << endl;
+	}
 };
 
 class VirtualDerived2
-:public virtual Base{
+:virtual public EmptyClass{
+	void display(){
+		cout << "display virtual derived" << endl;
+	}
 };
 
 class VirtualDerived3
-:public VirtualDerived1, VirtualDerived2{
+:public VirtualDerived1, public VirtualDerived2{
 };
 
 int main(){
