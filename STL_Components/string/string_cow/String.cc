@@ -72,7 +72,7 @@ char & String::Charproxy::operator=(const char & ch)
 {
 	if(_index < _self.size())
 	{
-		//大于1才需要深拷贝，否则直接赋值
+		//大于1才需要深拷贝，否则直接赋值, 写时复制
 		if(_self.refcount() > 1)
 		{ //不需要考虑销毁，因为count 一定大于1.
 			_self.decreaseRefcount();	
