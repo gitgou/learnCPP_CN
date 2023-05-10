@@ -6,7 +6,6 @@
 
 ## Start
 
-### **Day 1** 
 
 **类（class):**
 
@@ -35,8 +34,6 @@
   https://github.com/gitgou/learnCPP_CN/blob/master/class/operator/stackStudent.cc
 
 
-
-### Day 2
 
 **类 (class):**
 
@@ -69,7 +66,7 @@
 
     [虚函数样例代码导航](https://github.com/gitgou/learnCPP_CN/tree/master/class/virtualfunc)
 
-### Day 3
+
 
 ​	STL 六大组件：容器（container）、算法(Algorithm)、迭代器(Iterator)、函数对象(Functional Object)、内存分配器(Allocator)、适配器(Adapter)
 
@@ -87,7 +84,7 @@
 
   [cppreference 导航](https://en.cppreference.com/w/cpp/io)
 
-### Day 4
+
 
 - **STL组件 -- 容器：**
 
@@ -103,11 +100,11 @@
 
   
 
-### Day 5
+
 
 ​	[小训练](https://github.com/gitgou/learnCPP_CN/tree/master/STL_Components/contains/practice)
 
-### Day 6
+
 
 - **RAII**
 
@@ -125,7 +122,6 @@
 
   [LRU Algorithm](https://github.com/gitgou/learnCPP_CN/blob/master/Algorithm_DataStruct/LRU.cc)
 
-### Day 7
 
 - **排序算法**
 
@@ -143,7 +139,7 @@
 
   Tips: 后续会将 LeetCode 刷题记录整理出来。
 
-### Day 8
+
 
 - **STL string cow,写时复制(0 copy):**
 
@@ -157,7 +153,7 @@
 
   [STL bind 函数](https://github.com/gitgou/learnCPP_CN/tree/master/STL_Components/functional)
 
-### Day 9
+
 
 - **设计模式：**
 
@@ -165,7 +161,6 @@
 
 ​		总共有二十几种设计模式，重点掌握单例模式、观察者模式、工厂模式、代理模式、外观模式、适配器模式；推荐学习网站：[设计模式](https://refactoringguru.cn/design-patterns/catalog) 、 [图解设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/)；后续再补充其它设计模式代码。
 
-### Day 10 - 11
 
 - **thread 多线程**
 
@@ -173,7 +168,6 @@
 
   实现了两个版本的线程库供参考：[thread](https://github.com/gitgou/learnCPP_CN/tree/master/thread)
 
-### Day 12 - 15 
 
 - **socket 网络编程**
 
