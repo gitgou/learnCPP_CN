@@ -69,6 +69,6 @@ int main(void)
 	Derived d;
 	display1(d);
 	display2(d);
-
+	//Derived 中有两个虚指针，继承自Base1 & Base2
 	std::cout << "sizeof(Derived): " << sizeof(Derived) << std::endl;
 }
