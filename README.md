@@ -102,7 +102,7 @@
 
 
 
-​	[小训练](https://github.com/gitgou/learnCPP_CN/tree/master/STL_Components/contains/practice)
+​	[小训练](https://github.com/gitgou/learnCPP_CN/tree/master/STL/contains/practice)
 
 
 
