@@ -1,3 +1,6 @@
+#include<iostream>
+using namespace std;
+
 template<class T, class D = std::default_delete<T> >
 class shared_ptr
 {
