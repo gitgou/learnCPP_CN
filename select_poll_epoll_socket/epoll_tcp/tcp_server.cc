@@ -208,7 +208,7 @@ void test()
 	//建立链接，完成三次握手
 	
 	//创建epoll对象
-	int epfd = epoll_create1(0);
+	int epfd = epoll_create(256);
 	add_epoll_readfd(epfd, listenfd);
 	unordered_set<int> client_set;
 	vector<struct epoll_event> event_list(1024);
