@@ -5,12 +5,9 @@ CC:= g++
 CXXFLAGS:= -g -Wall $(addprefix -I, $(INC_DIR)) #加载头文件
 LIBS:= -lpthread
 OBJS:= $(patsubst %.cc, %.o, $(SRCS))
-#OBJS:= Query.o TextQuery.o get_print.o
 ##执行下面所有依赖文件命令
 BIN_EXE:= testThread.exe 
-#all:wordQueryTest.exe andQueryText.exe and_orQueryTest.exe
 
-#wordQueryTest.exe:Query.o TextQuery.o wordQueryTest.o 
 #	$(CC) -o $@ $^ $(CXXFLAGS)
 
 $(BIN_EXE):$(OBJS)
